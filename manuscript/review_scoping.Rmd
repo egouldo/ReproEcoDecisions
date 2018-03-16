@@ -1,0 +1,39 @@
+---
+title: "review_scoping"
+author: "Elise Gould"
+date: "16/03/2018"
+output: html_document
+---
+
+Before the commencement of an Evidence Synthesis, it is essential that some ‘scoping’ is undertaken to guide the construction of a comprehensive and appropriate Protocol, and to provide an indication of the likely form of the synthesis and thus facilitate resource planning. In certain circumstances, it may not be efficient to commit to a synthesis without some prior estimation of its value in terms of the likely extent and reliability of its findings. In addition, when scoping a Systematic Review, an estimate of the type of data (quantitative, qualitative) may be desirable to inform the type of data synthesis that might be appropriate.
+
+The expected output from a scoping exercise is an estimate of the quantity of evidence, and a characterisation of the likely evidence base, pertaining to the question (see Box 3.1 for an example). The extent of investment in scoping required to meet CEE standards will differ with each Evidence Synthesis. We detail below the steps of a full scoping exercise.
+
+# Developing and testing of the search strategy
+
+
+1.1 Establish a test-list
+1.2 Identify search terms
+1.3 Identify relevant sources of articles
+1.4 Choosing bibliographic management software
+1.5 Addressing the need for grey literature
+1.6 Deciding when to stop
+1.7 Submitting the search strategy for peer-review
+
+In practice, it is unlikely that absolutely all of the relevant literature can be identified during an evidence synthesis search, for several reasons: (1) literature is often searched and examined only in those languages known to the project team; (2) some articles may not be accessible due to restricted access pay walls or confidentiality; (3) others lack an abstract or have unhelpful titles, which makes them difficult to identify; (4) others may simply not be indexed in a searchable database. Within these constraints, searches conducted for evidence synthesis should be as comprehensive as possible, and they should be documented so they can be repeated and readers can appreciate their strengths and weaknesses. Reporting any limitations to searches, such as unavoidable gaps in coverage (e.g. lack of access to some literature) is an important part of the search process, to ensure that readers have confidence in the review methods, and to qualify the interpretation of the evidence synthesis findings.
+
+Steps involved in planning a search are presented in chronological order, bearing in mind that some of the process may be iterative. We also highlight the methods that enable the project team to identify, minimise and report any risks of bias that may affect the search and how this can affect the findings of an evidence synthesis.
+
+We use the following terminology: search terms encompasses individual or compound words used in a search to find relevant articles. A search string is a combination of search terms combined using Boolean operators. A search strategy is the whole search methodology, including search terms, search strings, the bibliographic sources searched, and enough information to ensure the reproducibility of the search. Bibliographic sources (see below for more details) capture any source of references, including electronic bibliographic databases, those sources which would not be classified as databases (e.g. the Internet via search engines), hand searched journals, and personal contacts.
+
+**Preventing errors and biases**
+
+
+
+# Estimating volume of relevant literature
+
+
+
+# Estimating required resources
+
+# 

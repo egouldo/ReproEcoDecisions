@@ -9,6 +9,8 @@ Before the commencement of an Evidence Synthesis, it is essential that some ‘s
 
 The expected output from a scoping exercise is an estimate of the quantity of evidence, and a characterisation of the likely evidence base, pertaining to the question (see Box 3.1 for an example). The extent of investment in scoping required to meet CEE standards will differ with each Evidence Synthesis. We detail below the steps of a full scoping exercise.
 
+[http://www.environmentalevidence.org/guidelines/section-3](http://www.environmentalevidence.org/guidelines/section-3)
+
 # Developing and testing of the search strategy
 
 
@@ -26,13 +28,218 @@ Steps involved in planning a search are presented in chronological order, bearin
 
 We use the following terminology: search terms encompasses individual or compound words used in a search to find relevant articles. A search string is a combination of search terms combined using Boolean operators. A search strategy is the whole search methodology, including search terms, search strings, the bibliographic sources searched, and enough information to ensure the reproducibility of the search. Bibliographic sources (see below for more details) capture any source of references, including electronic bibliographic databases, those sources which would not be classified as databases (e.g. the Internet via search engines), hand searched journals, and personal contacts.
 
-**Preventing errors and biases**
+##Preventing errors and biases
+
+**Errors include:**
+
+- missing search terms
+- unintentional misspelling of terms
+- errors in search syntax (inappropriate use of Boolean operators, e.g.)
+- inappropriate search terms
+
+Can be avoided by undertaking rigorous search term identification process, and peer-reviewing the strategy, within and outside the team, during Protocol development.
+
+**Biases (systematic errors) in the search strategy:
+
+Minimising bias: 
+
+- looking for evidence outside traditional academic electronic bibliographic sources (grey literature)
+- using multiple databases and serach tools
+- contacting organisations or individuals who may have relevant material
+
+Other biases, from Bayliss & Beyer, 2015:
+- language bias (e.g. studies with significant or interesting results are more likely to be published in English)
+- Prevailing paradigm bias: studies supporting the prevailing paradigm or topic, are more likely to be published, and therefore discoverable.
+- Temporal bias: Studies supporting a hypothesis are more likely to be published first (results might not be supported by later studies). Also older articles maybe overlooked and misinterpretations perpetuated. Search older publications, and consider updating the search in the future.
+- publication bias: asymetry in the likelihood of publishing results, e.g. those supporting significant results are more likely to be published. The grey literature is likely to contain non-significant results + non-English language results, therefore these should be searched also.
+
+Using multiple languages is recommended.... I really don't think this is possible given the scope of the PhD, and the nature of the subject matter / question -- There aren't really going to be many numerical results, such as effect sizes or P-values in the studies I'll be reviewing. Consequently, trying to dig out information according to the coding is likely to be difficult / resource intensive.
+
+## Structuring the search with PICO / PECO elements
+
+"An evidence synthesis process starts with a question that is usually structured into “building blocks” (concepts or elements), some of which are then used to develop the search strategy.  The search strategy illustrated below is based on PICO/PECO elements which are commonly used in CEE evidence synthesis. Other elements and question structures exist (See Section 2). In any of these question structures it is possible to narrow the question (and the search) by adding additional search terms defining the Context or Setting of the question (e.g. “tropical”, “experimental”, or “pleistocene”)."
 
 
+# Planning the search strategy
+
+The goal is to design a search strategy that maximises the probability of identifying relevant articles, whilst minimising the time spent searching.
+
+Planning can also include "discussions about eligibility criteria for subsequent screening", since these are often linked to search terms.
+
+There should also be discussion around decision criteria defining when to stop the search, as resource constraints may be a major reason to limit the search, and should be both anticipated and explained in the Protocol.
+
+## Establishing a test list
+
+A test-list is a set of articles that have been identified as relevant to answer the question of the evidence synthesis (e.g. are within the scope, and provide some evidence to answer the question). It can be created by asking experts, researchers and stakeholders, for suggestions and by perusing existing reviews. The test-list is independent of the search itself and is used to help identify the search strategy, as well as assess the performance of the search strategy.
+
+The project team should read the list of articles to ensure they are relevant to the synthesis question. The performance of a search strategy should be reported, i.e. whether the search strategy correctly retrieves the relevant articles and whetehr all available relevant literature to answer the evidence synthesis question is likely to have been identified. It can be presented in the Protocol submitted for peer-review.
+
+## Identifying search terms
+
+Search string (combinations of key words and phrases) development should occur during the planning stage, and is an iterative process, testing search strings using selected databases, recording numbers of references identified and sampling titles for proportional relevance or **specificity** (the proportion of the sample that appears to be relevant to the Evidence Synthesis question). **Sensitivity** (the proportion of potentially relevant articles identified as estimated using the test list) should improve as testing progresses and reaches 100% when results from databases are combined.
+
+The iterative process can include:
+
+- considering synonyms, 
+- alternative spellings, 
+- and non-English languages terms within the search strategy.
+
+An initial list can be compiled with the help of both "comissioning organisation and stakeholders".
+
+**All iterations of tested terms should be recorded, along with the number of reference (hits) they return.**
+
+Boolean operators (AND, OR, NOT) specify logic functions. They group search terms into blocks according to the PICO or PECO elements, so that the search is structured and easy to understand, review and amend, if necessary.
+
+Using AND decreases the number of articles retrieved, using OR enlarges. A combination of the two will change the exhaustivity and precision of the search.
+
+OR identifies articles where at least one of the terms is present. It combines the terms within one of the PICO elements, for example, all search terms related to the Population.
+
+AND narrows the search, requiring articles to include at least ONE search term from the lists given on each side of the operator. It can identify articles which contain, e.g. both a Population AND an Intervention (or Exposure) term. 
+
+NOT excludes specified search terms or PICO elements from search results. It can have unanticipated results, and may exclude relevant records. Therefore it shouldn't ususally be used.
+
+Proximity operators: (SAME, NEAR, ADJ) can constrain the search by defining the number of words between the appearance of two search terms. Proximity operators are more precise than using AND, so may be helpful when a large volume of search results are being returned.  
+
+exposure terms and outcome terms can be combined into strings to test. The number of references returned should be recorded, as well as the sensitivity and specificty, for each search. The first 100 articles returned can be screened to assess the exposure term's usefulness.
+
+"A high-sensitivity and low-specificity approach is often necessary to capture all or most of the relevant articles available, and reduce bias and increase repeatability in capture (see below). Typically, large numbers of articles are therefore identified but rejected at the title and/or abstract screening stage."
+
+The final step is to test the strategy with the test list. A comprehensive set of terms and strings with an appropriate balance of specificity and sensitivity should retrieve these articles, without returning an unmanageable number of irrelevant articles. If articles were not returned that were present in the test list, reasons for this should be investigated, and the strategy modified to capture them.
+
+This performance of the search strategy should be recorded in the Protocol (e.g. as a percentage of the test-list finally retrieved by the search strategy when applied in each electronic bibliographic source). Higher percentages are indicative that the search is optimised and the conclusions of the review are valid. When searches from all bibliographic sources are combined, the test list should be fully captured.
+
+## Coverage and accessibility
+
+Multiple sources should be searched to ensure as many relevant articles are returned as possible. Which sources? this is an important decision, and it depends on the disciplines addressed by the question. The identification of sources that provide the greatest quantity of relevant articles for a limited number of searches, and their contribution to reducing the biases discussed above, should be considered. Quantity of results is NOT a good indicator of relevance. Peer review of the Protocol can aid in refining the sources searched.
+
+Accessibility (firewalls), shouldn't be too much of an issue because the University has very good access to most journals / databases.
+
+## Software for assembling the bibliographic library
+
+- enable easy removal of duplicate articles
+- locate and import abstracts and full-text versions of articles
+- enable recording of screening decisions
+
+## Grey literature
+
+"relates to documents that may be difficult to locate because they are not indexed in usual bibliographic sources. It has been defined as "manifold document types produced on all levels of government, academics, business and industry in print and electronic formats that are protected by intellectual property rights, of sufficient quality to be collected and preserved by libraries and institutional repositories, but not controlled by commercial publishers; i.e. where publishing is not the primary activity of the producing body.""
+
+"Searches for grey literature should normally be included in evidence synthesis for two main reasons: 1) to try to minimize possible publication bias (see 1.7; Hopewell et al. 2007), where ‘positive’ (i.e. confirmative, statistically significant) results are more likely to be published in academic journals (Leimu and Koricheva 2005); and 2) to include studies not intended for the academic domain, such as practitioner reports and consultancy documents which may nevertheless contain relevant information such as details on study methods or results not reported in journal articles often limited by word length."
+
+## When to stop
+
+Explicit criteria should inform stopping rules, and should be recorded in the Protocol / Synthesis report.
+Primarily should rely on the acceptability of the performance of the search, rather than unlimited resources (e.g. running out of funds).
+
+You can use the test-list as an indicator of when to stop. You can also stop when each additional unit of time spent in searching returns fewer relevant references. There are also statistical techniques, such as capture-recapture and relative call method to guide decisions about when to stop searching. 
+
+For google, how to know when to stop? THOUSANDS of hits!! Picking an arbitrary number is not so great.. rather, you should stop when there is a decline in the relevance of enw articles. Keep screening as long as relevant articles are being identified.
+
+# Planning the eligibility criteria & Eligibility Screening
+
+Explicit eligibility criteria ensure transparency and objectivity, thus reducing the risk of introducing errors or bias if decisions are selective, subjective or inconsistent. Criteria should reflect the question being asked, and should follow logically from the 'key elements' that describe the question structure.
+
+THe CEE evidence synthesis review keeps talking about 'PICO' type questions, i.e. where interest is on determining effects of an intervention within a specified population (population, intervention, comparator, outcome), all of which must be reported in an article describign primary research, for that article to be eligible for inclusion.
+
+Developing the search strategy can aid in refining eligibility criteria. For example, titles / abstracts and full text found during scoping can form a sample of the literature within which papers that are not relevant (ineligible) for different reasons (inc unexpected use of synonyms, use of similar wording in other disciplines) may be identified and appropriate eligibility criteria developed. Planning the criteria also allows for discussion about the scope and scale of articles that will be retained.
+
+Pointers:
+
+"Keeping the list of eligibility criteria short and explicit, and specifying the criteria such that an article would be excluded if it fails one or more of the criteria is a useful approach since this minimises the range of information that members of the review team would need to locate in an article and means that if an article is clearly seen not to meet one of the criteria then the remaining criteria would not have to be considered."
+
+"Since a single failed eligibility criterion is sufficient for an article to be excluded from an evidence synthesis, it may be helpful to assess the eligibility criteria in order of importance (or ease of finding them within articles), so that the first ‘no’ response can be used as the primary reason for exclusion of the study, and the remaining criteria need not be assessed (Higgins & Green, 2011)."
+
+Even if study design is not explicit in the question structure, it should be included as an eligibility criterion. "The type of study design may also be indicative of the likely validity of the evidence, since some study designs may be more prone to bias than others (see Box 3.3)."
+
+## Pilot testing the criteria
+
+"The eligibility screening procedure should be pilot-tested and refined by arranging for several reviewers (at least two per article) to apply the agreed study inclusion (eligibility) criteria to the subset of identified relevant articles."
+
+**why pilot test?**
+
+- check that the criteria correctly classifies studies
+- give an indication of how long the process takes, assisting with planning the full synthesis
+- provide training for review team on how to interpret and apply the criteria, thus ensuring consistency of understanding and application
+- identify unanticipated issues and deal with them before finalising the methods
+
+**Pilot testing method**
+
+"A typical approach is to develop an eligibility screening form that lists the inclusion and exclusion criteria, together with instructions for the reviewers, to ensure that each reviewer follows the same procedure. A standard approach is to develop a form that guides the reviewers to make simple decisions, for example: to include the article; to exclude it; or to mark it as unclear. Reviewers screen the titles and/or abstracts of the subset of articles and then compare their screening decisions to identify whether they are adequately consistent. If necessary, the form should be refined and re-tested until an acceptable level of agreement is reached.  Once the suitability of the eligibility form has been tested on titles and/or abstracts, it should be tested on full-text versions of articles in the identified subset using a similar approach. The finally agreed draft eligibility screening criteria and form should then be provided when the Protocol is submitted (see below)."
+
+Test on a sample of articles (no firm rule about how many should be tested, just must ensure that the criteria will correctly identify articles that can answer the synthesis question without needing further amendments). There have been suggestions that around 10 - 12 articles can be passed to other review team members by another screener. In that sample should be some definitely excluded, definitely included and doubtful articles.
+
+If relevant articles are found to have been excluded, "irrelevant articles are included, or ther eare a large number of unclear judgments being made by the team, then criteria should be revised and re-tested until there is acceptable discrimination between relevant and irrelevant articles." The finally-agreed criteria should be presented in the Protocol.
+
+# Data coding and data extraction
+
+"Data coding and data extraction refer to the process of systematically extracting relevant information from the articles included in the Evidence Synthesis. Data coding is the recording of relevant characteristics (meta-data) of the study such as when and where the study was conducted and by whom, as well as aspects of the study design and conduct."
+
+"Data extraction refers to the recording of the results of the study (e.g. in terms of effect size means and variances). Data extraction is undertaken in Systematic Reviews only. A standard data coding or extraction form or table (e.g. spreadsheet) is usually developed and pilot-tested on full-text copies of the relevant subset of identified articles. The table contains prompts to the reviewers to record all relevant information necessary to address the synthesis question, plus any additional information required for critical appraisal (see below) and any contextual information that will be required when writing the final Evidence Synthesis report."
+
+Pilot-testing:
+
+Should involve at least two reviewers per article, so that inconsistencies can be identified and corrected. Note any issues with data extraction, e.g. if data are inconsistently presented in a suitable format within the articles.
+
+The final coding criteria should be published in the Protocol, and should also take into account the capture of information on potential reasons (effect modifiers) for heterogeneity in outcomes (?! relevant to me).
+
+# Critical appraisal criteria
+
+why is this important?
+
+"Not all research is conducted to the best standards of scientific rigour and therefore not all information available about a particular topic may be correct. A key challenge is to identify information which is likely to be correct and that which is not. If a systematic review is based on incorrect evidence then the results of the review will also be incorrect.  The critical appraisal step is a crucial part of a systematic review since this is where the “correctness” of the evidence is ascertained and decisions are made as to which evidence is permitted to inform the review’s conclusions."
+
+- The critical appraisal should focus on aspects of research study conduct that influence whether the resulting information will be correct or not (bearing in mind that some aspects of study design may be more important than others).
+- To have any bearing on the review’s conclusions the critical appraisal step has to directly inform the data synthesis step of the systematic review. 
+
+These criteria must be planned a priori, and critical appraisal needs to be a structured process.
+
+Critical appraisal is about the process of assessing whether the evidence is valid for answering the review question. There are two compoents of appraisal:
+
+1. internal validity - extent to which evidence is free from bias or confounding
+2. external validity - extent to which evidence is relevant to the question being asked, ie whether it can be generalised from the original study to address the review question.
+
+Is there some gold-standard methodology that might be adopted to minimise bias and maximise anlytical power? It could be impossible, practically, but possible to describe in theory.
+
+The checklist should be pilot tested on the full-text version of each article in the sample of potentially relevant references, with at least two reviewers per article.
+
+Well.... it's interesting because the stuff that comprises the critical appraisal checklist, also constitutes the content I want to be coding for...
+
+## Internal validity: understanding bias
+
+"a systematic deviation in study results from their true value, i.e. it means either an underestimation or overestimation of the true vlaue." It's not the same as statistical uncertainty, which results from random error and can therefore be reduced by either increasing the sample size in a study or performing meta-analyses to increase the precision of an estimate.
+
+Bias is a systematic error, which cannot be reduced by increasing the sample size or by pooling study results in a meta-analysis. "It is generally acknowledged that bias is an important threat to the validity of research findings across scientific disciplines, and it has been argued that bias is one of several factors that collectively contribute to the majority of research findings being incorrect (Ioannidis, 2005). Traditional non-systematic reviews of evidence which do not formally assess the rigour of primary research studies would not be able to detect bias."
+
+How is this relevant to me, when the things I'm looking for are most likely to be qualitative elements? One example, is the choice of alternative, or perhaps scenario in testing / simulating a decision tool, which can result in overwhelmingly seemingly posistive or negative decision outcomes. Where bias is present, it often leads to an over-estimation of beneficial outomces.
+
+It is difficult to directly measure bias itself, therefore the 'risk of bias' of a particular study may be measured, when examining the study design and methods. "studies that fail to meet specified criteria for mitigating known types of bias may be referred to as being "high risk of bias"". Those with "adequate methodology to protect against bias are considered to be at "low risk of bias"".
+
+risk of bias should be assessed separatley for each outcome.... we could apply this to each stage of the decision process.
+Thus elements of the critical appraisal process might actuallly inform aspects which inform the coding criteria.
+
+## External validity
+
+Is the information obtained from a study generalizable.. i.e. directly applicable to how the answer to the question being addressed would be applied in practice?
+
+External validity relates to how well efficacy predicts effectiveness.
+
+The extent to which this can be evaluated depends on how the question is framed. But two key aspects of external validity should always be considered:
+
+1. whether the studies included are appropriate for answering the review quesiton (assessed for ecah individual study during critical appraisal. also must specify in the protocol what you do with studies that have low external validity - exclude, include in subgroup or sensitivity analyses?)
+2. whether the answer to the review question can be applied directly by the intended end-user "(which might, depending on the purpose of the review, be a conservation manager or other environmental practitioner; a policymaker; or a statistical model or process for which the review has generated a specified parameter)." also explained as "the extent to which the answer to the review question is generalizable to the setting in which the results of the review will be applied"
+
+# Data synthesis methods
+
+This is the collation of all evidence identified in the review in order to answer the review question. A narrative synthesis should always be planned, involving listing of eligible studies and tabulation of their key characteristics and outcomes.
+
+Review Team can pilot-test data synthesis methods, especially for quantitative data. This step should also inform the approach to the synthesis by allowing:
+- identification of the range of data types and methodological approaches
+- determination of appropriate effect size metrics and analytical approaches (quantitative or meta-analysis)
+- identification of study covariates
 
 # Estimating volume of relevant literature
 
-
+The benefit to scoping is tht resource requirements can be estimated. and that the protocol is comprehensive, and the review is appropriately focused and efficient. Can give insight into a timeline of the review and the likely costs.
 
 # Estimating required resources
 

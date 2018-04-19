@@ -1,0 +1,37 @@
+---
+title: "Initial Review"
+output: html_notebook
+bibliography: "references.bib"
+---
+
+This is a mini-analysis to take a look at 
+
+
+## Collect list of articles
+
+ALSO: check out metagear package for screening studies.
+
+Following S2 of Guerrero  et al. [-@Guerrero:2017gm] I generate a list of articles using the following search bounds:
+
+```
+- Database:
+- Years
+- select article if keywords or abstract contains:
+"conservation" or "ecology" or "restoration"
+AND
+"decision support" or "decision analysis" or "decision theory" or "decision science"
+AND
+within these subject areas: "Biodiversity & Conservation" 
+```
+
+```{r}
+#library(metagear) #currently install issues on this
+library(fulltext)
+library(tidyverse)
+res1 <- fulltext::ft_search(query = "ecology AND conservation AND decision science")
+res1$plos
+out <- ft_get(res1)
+out$plos
+```
+
+# References

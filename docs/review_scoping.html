@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Elise Gould" />
+
+
+<title>review_scoping</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ReproEcoDecisions</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/jdblischak/workflowr">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">review_scoping</h1>
+<h4 class="author"><em>Elise Gould</em></h4>
+<h4 class="date"><em>16/03/2018</em></h4>
+
+</div>
+
+
+<p><strong>Last updated:</strong> 2018-05-08</p>
+<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
+<ul>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</details>
+</li>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> 77ce6c6 </summary></p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+<pre><code>
+Ignored files:
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+    Ignored:    R/
+    Ignored:    man/
+
+Unstaged changes:
+    Deleted:    manuscript/review_protocol.Rmd
+    Deleted:    manuscript/review_scoping.Rmd
+
+</code></pre>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
+</li>
+</ul>
+<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
+<ul>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+File
+</th>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+77ce6c6
+</td>
+<td style="text-align:left;">
+egouldo
+</td>
+<td style="text-align:left;">
+2018-05-08
+</td>
+<td style="text-align:left;">
+publish protocol and scoping files
+</td>
+</tr>
+</tbody>
+</table>
+</ul>
+<p></details></p>
+<hr />
+<p>Before the commencement of an Evidence Synthesis, it is essential that some ‘scoping’ is undertaken to guide the construction of a comprehensive and appropriate Protocol, and to provide an indication of the likely form of the synthesis and thus facilitate resource planning. In certain circumstances, it may not be efficient to commit to a synthesis without some prior estimation of its value in terms of the likely extent and reliability of its findings. In addition, when scoping a Systematic Review, an estimate of the type of data (quantitative, qualitative) may be desirable to inform the type of data synthesis that might be appropriate.</p>
+<p>The expected output from a scoping exercise is an estimate of the quantity of evidence, and a characterisation of the likely evidence base, pertaining to the question (see Box 3.1 for an example). The extent of investment in scoping required to meet CEE standards will differ with each Evidence Synthesis. We detail below the steps of a full scoping exercise.</p>
+<p><a href="http://www.environmentalevidence.org/guidelines/section-3" class="uri">http://www.environmentalevidence.org/guidelines/section-3</a></p>
+<div id="developing-and-testing-of-the-search-strategy" class="section level1">
+<h1>Developing and testing of the search strategy</h1>
+<p>1.1 Establish a test-list 1.2 Identify search terms 1.3 Identify relevant sources of articles 1.4 Choosing bibliographic management software 1.5 Addressing the need for grey literature 1.6 Deciding when to stop 1.7 Submitting the search strategy for peer-review</p>
+<p>In practice, it is unlikely that absolutely all of the relevant literature can be identified during an evidence synthesis search, for several reasons: (1) literature is often searched and examined only in those languages known to the project team; (2) some articles may not be accessible due to restricted access pay walls or confidentiality; (3) others lack an abstract or have unhelpful titles, which makes them difficult to identify; (4) others may simply not be indexed in a searchable database. Within these constraints, searches conducted for evidence synthesis should be as comprehensive as possible, and they should be documented so they can be repeated and readers can appreciate their strengths and weaknesses. Reporting any limitations to searches, such as unavoidable gaps in coverage (e.g. lack of access to some literature) is an important part of the search process, to ensure that readers have confidence in the review methods, and to qualify the interpretation of the evidence synthesis findings.</p>
+<p>Steps involved in planning a search are presented in chronological order, bearing in mind that some of the process may be iterative. We also highlight the methods that enable the project team to identify, minimise and report any risks of bias that may affect the search and how this can affect the findings of an evidence synthesis.</p>
+<p>We use the following terminology: search terms encompasses individual or compound words used in a search to find relevant articles. A search string is a combination of search terms combined using Boolean operators. A search strategy is the whole search methodology, including search terms, search strings, the bibliographic sources searched, and enough information to ensure the reproducibility of the search. Bibliographic sources (see below for more details) capture any source of references, including electronic bibliographic databases, those sources which would not be classified as databases (e.g. the Internet via search engines), hand searched journals, and personal contacts.</p>
+<div id="preventing-errors-and-biases" class="section level2">
+<h2>Preventing errors and biases</h2>
+<p><strong>Errors include:</strong></p>
+<ul>
+<li>missing search terms</li>
+<li>unintentional misspelling of terms</li>
+<li>errors in search syntax (inappropriate use of Boolean operators, e.g.)</li>
+<li>inappropriate search terms</li>
+</ul>
+<p>Can be avoided by undertaking rigorous search term identification process, and peer-reviewing the strategy, within and outside the team, during Protocol development.</p>
+<p>**Biases (systematic errors) in the search strategy:</p>
+<p>Minimising bias:</p>
+<ul>
+<li>looking for evidence outside traditional academic electronic bibliographic sources (grey literature)</li>
+<li>using multiple databases and serach tools</li>
+<li>contacting organisations or individuals who may have relevant material</li>
+</ul>
+<p>Other biases, from Bayliss &amp; Beyer, 2015: - language bias (e.g. studies with significant or interesting results are more likely to be published in English) - Prevailing paradigm bias: studies supporting the prevailing paradigm or topic, are more likely to be published, and therefore discoverable. - Temporal bias: Studies supporting a hypothesis are more likely to be published first (results might not be supported by later studies). Also older articles maybe overlooked and misinterpretations perpetuated. Search older publications, and consider updating the search in the future. - publication bias: asymetry in the likelihood of publishing results, e.g. those supporting significant results are more likely to be published. The grey literature is likely to contain non-significant results + non-English language results, therefore these should be searched also.</p>
+<p>Using multiple languages is recommended…. I really don’t think this is possible given the scope of the PhD, and the nature of the subject matter / question – There aren’t really going to be many numerical results, such as effect sizes or P-values in the studies I’ll be reviewing. Consequently, trying to dig out information according to the coding is likely to be difficult / resource intensive.</p>
+</div>
+<div id="structuring-the-search-with-pico-peco-elements" class="section level2">
+<h2>Structuring the search with PICO / PECO elements</h2>
+<p>“An evidence synthesis process starts with a question that is usually structured into “building blocks” (concepts or elements), some of which are then used to develop the search strategy. The search strategy illustrated below is based on PICO/PECO elements which are commonly used in CEE evidence synthesis. Other elements and question structures exist (See Section 2). In any of these question structures it is possible to narrow the question (and the search) by adding additional search terms defining the Context or Setting of the question (e.g. “tropical”, “experimental”, or “pleistocene”).”</p>
+</div>
+</div>
+<div id="planning-the-search-strategy" class="section level1">
+<h1>Planning the search strategy</h1>
+<p>The goal is to design a search strategy that maximises the probability of identifying relevant articles, whilst minimising the time spent searching.</p>
+<p>Planning can also include “discussions about eligibility criteria for subsequent screening”, since these are often linked to search terms.</p>
+<p>There should also be discussion around decision criteria defining when to stop the search, as resource constraints may be a major reason to limit the search, and should be both anticipated and explained in the Protocol.</p>
+<div id="establishing-a-test-list" class="section level2">
+<h2>Establishing a test list</h2>
+<p>A test-list is a set of articles that have been identified as relevant to answer the question of the evidence synthesis (e.g. are within the scope, and provide some evidence to answer the question). It can be created by asking experts, researchers and stakeholders, for suggestions and by perusing existing reviews. The test-list is independent of the search itself and is used to help identify the search strategy, as well as assess the performance of the search strategy.</p>
+<p>The project team should read the list of articles to ensure they are relevant to the synthesis question. The performance of a search strategy should be reported, i.e. whether the search strategy correctly retrieves the relevant articles and whetehr all available relevant literature to answer the evidence synthesis question is likely to have been identified. It can be presented in the Protocol submitted for peer-review.</p>
+</div>
+<div id="identifying-search-terms" class="section level2">
+<h2>Identifying search terms</h2>
+<p>Search string (combinations of key words and phrases) development should occur during the planning stage, and is an iterative process, testing search strings using selected databases, recording numbers of references identified and sampling titles for proportional relevance or <strong>specificity</strong> (the proportion of the sample that appears to be relevant to the Evidence Synthesis question). <strong>Sensitivity</strong> (the proportion of potentially relevant articles identified as estimated using the test list) should improve as testing progresses and reaches 100% when results from databases are combined.</p>
+<p>The iterative process can include:</p>
+<ul>
+<li>considering synonyms,</li>
+<li>alternative spellings,</li>
+<li>and non-English languages terms within the search strategy.</li>
+</ul>
+<p>An initial list can be compiled with the help of both “comissioning organisation and stakeholders”.</p>
+<p><strong>All iterations of tested terms should be recorded, along with the number of reference (hits) they return.</strong></p>
+<p>Boolean operators (AND, OR, NOT) specify logic functions. They group search terms into blocks according to the PICO or PECO elements, so that the search is structured and easy to understand, review and amend, if necessary.</p>
+<p>Using AND decreases the number of articles retrieved, using OR enlarges. A combination of the two will change the exhaustivity and precision of the search.</p>
+<p>OR identifies articles where at least one of the terms is present. It combines the terms within one of the PICO elements, for example, all search terms related to the Population.</p>
+<p>AND narrows the search, requiring articles to include at least ONE search term from the lists given on each side of the operator. It can identify articles which contain, e.g. both a Population AND an Intervention (or Exposure) term.</p>
+<p>NOT excludes specified search terms or PICO elements from search results. It can have unanticipated results, and may exclude relevant records. Therefore it shouldn’t ususally be used.</p>
+<p>Proximity operators: (SAME, NEAR, ADJ) can constrain the search by defining the number of words between the appearance of two search terms. Proximity operators are more precise than using AND, so may be helpful when a large volume of search results are being returned.</p>
+<p>exposure terms and outcome terms can be combined into strings to test. The number of references returned should be recorded, as well as the sensitivity and specificty, for each search. The first 100 articles returned can be screened to assess the exposure term’s usefulness.</p>
+<p>“A high-sensitivity and low-specificity approach is often necessary to capture all or most of the relevant articles available, and reduce bias and increase repeatability in capture (see below). Typically, large numbers of articles are therefore identified but rejected at the title and/or abstract screening stage.”</p>
+<p>The final step is to test the strategy with the test list. A comprehensive set of terms and strings with an appropriate balance of specificity and sensitivity should retrieve these articles, without returning an unmanageable number of irrelevant articles. If articles were not returned that were present in the test list, reasons for this should be investigated, and the strategy modified to capture them.</p>
+<p>This performance of the search strategy should be recorded in the Protocol (e.g. as a percentage of the test-list finally retrieved by the search strategy when applied in each electronic bibliographic source). Higher percentages are indicative that the search is optimised and the conclusions of the review are valid. When searches from all bibliographic sources are combined, the test list should be fully captured.</p>
+</div>
+<div id="coverage-and-accessibility" class="section level2">
+<h2>Coverage and accessibility</h2>
+<p>Multiple sources should be searched to ensure as many relevant articles are returned as possible. Which sources? this is an important decision, and it depends on the disciplines addressed by the question. The identification of sources that provide the greatest quantity of relevant articles for a limited number of searches, and their contribution to reducing the biases discussed above, should be considered. Quantity of results is NOT a good indicator of relevance. Peer review of the Protocol can aid in refining the sources searched.</p>
+<p>Accessibility (firewalls), shouldn’t be too much of an issue because the University has very good access to most journals / databases.</p>
+</div>
+<div id="software-for-assembling-the-bibliographic-library" class="section level2">
+<h2>Software for assembling the bibliographic library</h2>
+<ul>
+<li>enable easy removal of duplicate articles</li>
+<li>locate and import abstracts and full-text versions of articles</li>
+<li>enable recording of screening decisions</li>
+</ul>
+</div>
+<div id="grey-literature" class="section level2">
+<h2>Grey literature</h2>
+<p>“relates to documents that may be difficult to locate because they are not indexed in usual bibliographic sources. It has been defined as”manifold document types produced on all levels of government, academics, business and industry in print and electronic formats that are protected by intellectual property rights, of sufficient quality to be collected and preserved by libraries and institutional repositories, but not controlled by commercial publishers; i.e. where publishing is not the primary activity of the producing body.“”</p>
+<p>“Searches for grey literature should normally be included in evidence synthesis for two main reasons: 1) to try to minimize possible publication bias (see 1.7; Hopewell et al. 2007), where ‘positive’ (i.e. confirmative, statistically significant) results are more likely to be published in academic journals (Leimu and Koricheva 2005); and 2) to include studies not intended for the academic domain, such as practitioner reports and consultancy documents which may nevertheless contain relevant information such as details on study methods or results not reported in journal articles often limited by word length.”</p>
+</div>
+<div id="when-to-stop" class="section level2">
+<h2>When to stop</h2>
+<p>Explicit criteria should inform stopping rules, and should be recorded in the Protocol / Synthesis report. Primarily should rely on the acceptability of the performance of the search, rather than unlimited resources (e.g. running out of funds).</p>
+<p>You can use the test-list as an indicator of when to stop. You can also stop when each additional unit of time spent in searching returns fewer relevant references. There are also statistical techniques, such as capture-recapture and relative call method to guide decisions about when to stop searching.</p>
+<p>For google, how to know when to stop? THOUSANDS of hits!! Picking an arbitrary number is not so great.. rather, you should stop when there is a decline in the relevance of enw articles. Keep screening as long as relevant articles are being identified.</p>
+</div>
+</div>
+<div id="planning-the-eligibility-criteria-eligibility-screening" class="section level1">
+<h1>Planning the eligibility criteria &amp; Eligibility Screening</h1>
+<p>Explicit eligibility criteria ensure transparency and objectivity, thus reducing the risk of introducing errors or bias if decisions are selective, subjective or inconsistent. Criteria should reflect the question being asked, and should follow logically from the ‘key elements’ that describe the question structure.</p>
+<p>THe CEE evidence synthesis review keeps talking about ‘PICO’ type questions, i.e. where interest is on determining effects of an intervention within a specified population (population, intervention, comparator, outcome), all of which must be reported in an article describign primary research, for that article to be eligible for inclusion.</p>
+<p>Developing the search strategy can aid in refining eligibility criteria. For example, titles / abstracts and full text found during scoping can form a sample of the literature within which papers that are not relevant (ineligible) for different reasons (inc unexpected use of synonyms, use of similar wording in other disciplines) may be identified and appropriate eligibility criteria developed. Planning the criteria also allows for discussion about the scope and scale of articles that will be retained.</p>
+<p>Pointers:</p>
+<p>“Keeping the list of eligibility criteria short and explicit, and specifying the criteria such that an article would be excluded if it fails one or more of the criteria is a useful approach since this minimises the range of information that members of the review team would need to locate in an article and means that if an article is clearly seen not to meet one of the criteria then the remaining criteria would not have to be considered.”</p>
+<p>“Since a single failed eligibility criterion is sufficient for an article to be excluded from an evidence synthesis, it may be helpful to assess the eligibility criteria in order of importance (or ease of finding them within articles), so that the first ‘no’ response can be used as the primary reason for exclusion of the study, and the remaining criteria need not be assessed (Higgins &amp; Green, 2011).”</p>
+<p>Even if study design is not explicit in the question structure, it should be included as an eligibility criterion. “The type of study design may also be indicative of the likely validity of the evidence, since some study designs may be more prone to bias than others (see Box 3.3).”</p>
+<div id="pilot-testing-the-criteria" class="section level2">
+<h2>Pilot testing the criteria</h2>
+<p>“The eligibility screening procedure should be pilot-tested and refined by arranging for several reviewers (at least two per article) to apply the agreed study inclusion (eligibility) criteria to the subset of identified relevant articles.”</p>
+<p><strong>why pilot test?</strong></p>
+<ul>
+<li>check that the criteria correctly classifies studies</li>
+<li>give an indication of how long the process takes, assisting with planning the full synthesis</li>
+<li>provide training for review team on how to interpret and apply the criteria, thus ensuring consistency of understanding and application</li>
+<li>identify unanticipated issues and deal with them before finalising the methods</li>
+</ul>
+<p><strong>Pilot testing method</strong></p>
+<p>“A typical approach is to develop an eligibility screening form that lists the inclusion and exclusion criteria, together with instructions for the reviewers, to ensure that each reviewer follows the same procedure. A standard approach is to develop a form that guides the reviewers to make simple decisions, for example: to include the article; to exclude it; or to mark it as unclear. Reviewers screen the titles and/or abstracts of the subset of articles and then compare their screening decisions to identify whether they are adequately consistent. If necessary, the form should be refined and re-tested until an acceptable level of agreement is reached. Once the suitability of the eligibility form has been tested on titles and/or abstracts, it should be tested on full-text versions of articles in the identified subset using a similar approach. The finally agreed draft eligibility screening criteria and form should then be provided when the Protocol is submitted (see below).”</p>
+<p>Test on a sample of articles (no firm rule about how many should be tested, just must ensure that the criteria will correctly identify articles that can answer the synthesis question without needing further amendments). There have been suggestions that around 10 - 12 articles can be passed to other review team members by another screener. In that sample should be some definitely excluded, definitely included and doubtful articles.</p>
+<p>If relevant articles are found to have been excluded, “irrelevant articles are included, or ther eare a large number of unclear judgments being made by the team, then criteria should be revised and re-tested until there is acceptable discrimination between relevant and irrelevant articles.” The finally-agreed criteria should be presented in the Protocol.</p>
+</div>
+</div>
+<div id="data-coding-and-data-extraction" class="section level1">
+<h1>Data coding and data extraction</h1>
+<p>“Data coding and data extraction refer to the process of systematically extracting relevant information from the articles included in the Evidence Synthesis. Data coding is the recording of relevant characteristics (meta-data) of the study such as when and where the study was conducted and by whom, as well as aspects of the study design and conduct.”</p>
+<p>“Data extraction refers to the recording of the results of the study (e.g. in terms of effect size means and variances). Data extraction is undertaken in Systematic Reviews only. A standard data coding or extraction form or table (e.g. spreadsheet) is usually developed and pilot-tested on full-text copies of the relevant subset of identified articles. The table contains prompts to the reviewers to record all relevant information necessary to address the synthesis question, plus any additional information required for critical appraisal (see below) and any contextual information that will be required when writing the final Evidence Synthesis report.”</p>
+<p>Pilot-testing:</p>
+<p>Should involve at least two reviewers per article, so that inconsistencies can be identified and corrected. Note any issues with data extraction, e.g. if data are inconsistently presented in a suitable format within the articles.</p>
+<p>The final coding criteria should be published in the Protocol, and should also take into account the capture of information on potential reasons (effect modifiers) for heterogeneity in outcomes (?! relevant to me).</p>
+</div>
+<div id="critical-appraisal-criteria" class="section level1">
+<h1>Critical appraisal criteria</h1>
+<p>why is this important?</p>
+<p>“Not all research is conducted to the best standards of scientific rigour and therefore not all information available about a particular topic may be correct. A key challenge is to identify information which is likely to be correct and that which is not. If a systematic review is based on incorrect evidence then the results of the review will also be incorrect. The critical appraisal step is a crucial part of a systematic review since this is where the “correctness” of the evidence is ascertained and decisions are made as to which evidence is permitted to inform the review’s conclusions.”</p>
+<ul>
+<li>The critical appraisal should focus on aspects of research study conduct that influence whether the resulting information will be correct or not (bearing in mind that some aspects of study design may be more important than others).</li>
+<li>To have any bearing on the review’s conclusions the critical appraisal step has to directly inform the data synthesis step of the systematic review.</li>
+</ul>
+<p>These criteria must be planned a priori, and critical appraisal needs to be a structured process.</p>
+<p>Critical appraisal is about the process of assessing whether the evidence is valid for answering the review question. There are two compoents of appraisal:</p>
+<ol style="list-style-type: decimal">
+<li>internal validity - extent to which evidence is free from bias or confounding</li>
+<li>external validity - extent to which evidence is relevant to the question being asked, ie whether it can be generalised from the original study to address the review question.</li>
+</ol>
+<p>Is there some gold-standard methodology that might be adopted to minimise bias and maximise anlytical power? It could be impossible, practically, but possible to describe in theory.</p>
+<p>The checklist should be pilot tested on the full-text version of each article in the sample of potentially relevant references, with at least two reviewers per article.</p>
+<p>Well…. it’s interesting because the stuff that comprises the critical appraisal checklist, also constitutes the content I want to be coding for…</p>
+<div id="internal-validity-understanding-bias" class="section level2">
+<h2>Internal validity: understanding bias</h2>
+<p>“a systematic deviation in study results from their true value, i.e. it means either an underestimation or overestimation of the true vlaue.” It’s not the same as statistical uncertainty, which results from random error and can therefore be reduced by either increasing the sample size in a study or performing meta-analyses to increase the precision of an estimate.</p>
+<p>Bias is a systematic error, which cannot be reduced by increasing the sample size or by pooling study results in a meta-analysis. “It is generally acknowledged that bias is an important threat to the validity of research findings across scientific disciplines, and it has been argued that bias is one of several factors that collectively contribute to the majority of research findings being incorrect (Ioannidis, 2005). Traditional non-systematic reviews of evidence which do not formally assess the rigour of primary research studies would not be able to detect bias.”</p>
+<p>How is this relevant to me, when the things I’m looking for are most likely to be qualitative elements? One example, is the choice of alternative, or perhaps scenario in testing / simulating a decision tool, which can result in overwhelmingly seemingly posistive or negative decision outcomes. Where bias is present, it often leads to an over-estimation of beneficial outomces.</p>
+<p>It is difficult to directly measure bias itself, therefore the ‘risk of bias’ of a particular study may be measured, when examining the study design and methods. “studies that fail to meet specified criteria for mitigating known types of bias may be referred to as being”high risk of bias“”. Those with “adequate methodology to protect against bias are considered to be at”low risk of bias“”.</p>
+<p>risk of bias should be assessed separatley for each outcome…. we could apply this to each stage of the decision process. Thus elements of the critical appraisal process might actuallly inform aspects which inform the coding criteria.</p>
+</div>
+<div id="external-validity" class="section level2">
+<h2>External validity</h2>
+<p>Is the information obtained from a study generalizable.. i.e. directly applicable to how the answer to the question being addressed would be applied in practice?</p>
+<p>External validity relates to how well efficacy predicts effectiveness.</p>
+<p>The extent to which this can be evaluated depends on how the question is framed. But two key aspects of external validity should always be considered:</p>
+<ol style="list-style-type: decimal">
+<li>whether the studies included are appropriate for answering the review quesiton (assessed for ecah individual study during critical appraisal. also must specify in the protocol what you do with studies that have low external validity - exclude, include in subgroup or sensitivity analyses?)</li>
+<li>whether the answer to the review question can be applied directly by the intended end-user “(which might, depending on the purpose of the review, be a conservation manager or other environmental practitioner; a policymaker; or a statistical model or process for which the review has generated a specified parameter).” also explained as “the extent to which the answer to the review question is generalizable to the setting in which the results of the review will be applied”</li>
+</ol>
+</div>
+</div>
+<div id="data-synthesis-methods" class="section level1">
+<h1>Data synthesis methods</h1>
+<p>This is the collation of all evidence identified in the review in order to answer the review question. A narrative synthesis should always be planned, involving listing of eligible studies and tabulation of their key characteristics and outcomes.</p>
+<p>Review Team can pilot-test data synthesis methods, especially for quantitative data. This step should also inform the approach to the synthesis by allowing: - identification of the range of data types and methodological approaches - determination of appropriate effect size metrics and analytical approaches (quantitative or meta-analysis) - identification of study covariates</p>
+</div>
+<div id="estimating-volume-of-relevant-literature" class="section level1">
+<h1>Estimating volume of relevant literature</h1>
+<p>The benefit to scoping is tht resource requirements can be estimated. and that the protocol is comprehensive, and the review is appropriately focused and efficient. Can give insight into a timeline of the review and the likely costs.</p>
+</div>
+<div id="estimating-required-resources" class="section level1">
+<h1>Estimating required resources</h1>
+</div>
+<div id="section" class="section level1">
+<h1></h1>
+</div>
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<hr>
+<p>
+  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
+  analysis was created with
+  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.0.1
+</p>
+<hr>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

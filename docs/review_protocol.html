@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Elise Gould" />
+
+
+<title>review_protocol</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ReproEcoDecisions</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/jdblischak/workflowr">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">review_protocol</h1>
+<h4 class="author"><em>Elise Gould</em></h4>
+<h4 class="date"><em>16/03/2018</em></h4>
+
+</div>
+
+
+<p><strong>Last updated:</strong> 2018-05-08</p>
+<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
+<ul>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</details>
+</li>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> 77ce6c6 </summary></p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+<pre><code>
+Ignored files:
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+    Ignored:    R/
+    Ignored:    man/
+
+Unstaged changes:
+    Deleted:    manuscript/review_protocol.Rmd
+    Deleted:    manuscript/review_scoping.Rmd
+
+</code></pre>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
+</li>
+</ul>
+<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
+<ul>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+File
+</th>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+77ce6c6
+</td>
+<td style="text-align:left;">
+egouldo
+</td>
+<td style="text-align:left;">
+2018-05-08
+</td>
+<td style="text-align:left;">
+publish protocol and scoping files
+</td>
+</tr>
+</tbody>
+</table>
+</ul>
+<p></details></p>
+<hr />
+<div id="title-page-and-abstract" class="section level1">
+<h1>Title Page and Abstract</h1>
+<div id="abstract" class="section level2">
+<h2>Abstract</h2>
+<p><strong>Background</strong> – the context and purpose of the review, including the review question;</p>
+<p><strong>Methods</strong> – how the review will be conducted and the outputs that are expected. All stages of the methods should be briefly described here, including searching, eligibility screening, data extraction, synthesis and presentation.</p>
+<p><strong>Keywords</strong></p>
+</div>
+</div>
+<div id="main-text" class="section level1">
+<h1>Main Text</h1>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>This section should be written in a way that is accessible to readers without specialist knowledge in that area and must clearly state – and, if helpful, illustrate – the background to the review and its aims. You should indicate why this study is necessary and what it aims to contribute to the field. If possible, a theory of change and/or conceptual model should be presented that links the key elements of the question (e.g. explaining how an intervention or exposure is linked to the outcome). The role of commissioners and other stakeholders in the formulation of the question should be described and explained. Any proposed role of stakeholders throughout the review process should also be described. It should logically lead the reader to the primary question stated in the next section.</p>
+</div>
+<div id="objective-of-the-systematic-review" class="section level2">
+<h2>Objective of the Systematic Review</h2>
+<p>You should describe the primary question and any secondary questions when applicable. The primary question is the main question of the Systematic Review and should be the same or very similar to the Protocol title. The rationale for any secondary questions (usually linked to possible subgroup and/or heterogeneity analyses) should be explained.</p>
+</div>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<div id="searches" class="section level3">
+<h3>Searches</h3>
+<p>Here the proposed searches are described in sufficient detail so as to be repeatable. Details of how the search strategy was developed through scoping should be provided (possibly in an additional file). The following list is a guide to the detail required on what will be searched and how the search will be conducted.</p>
+<ul>
+<li>search terms and languages</li>
+<li>search strings / combinations of searches (search strings refer to combinations of terms using Boolean characters, combinations are methods used to set-up and pool different searches run separately)</li>
+<li>Estimating the comprehensiveness of the search</li>
+<li>Bibliographic databases and services to be searched (e.g. ISI Web of Science, Scopus, CAB Abstracts)</li>
+<li>Internet searches to be conducted (e.g. Google Scholar)</li>
+<li>Specialist searches – Searches for grey literature: contacts, searches of organisational websites, use of specific search terms or strings, filtering or limitations.</li>
+<li>Supplementary searches such as Bibliographical searches and literature provided directly by stakeholders</li>
+<li>Any software that will be used to conduct and record your search should be described.</li>
+</ul>
+</div>
+<div id="eligibility-criteria-and-screening-process" class="section level3">
+<h3>Eligibility criteria and screening process</h3>
+<p>State here the criteria you will use to decide whether articles and the studies they report are eligible for inclusion in the review. Normally you should use the following subheadings;</p>
+<ul>
+<li>Eligible population(s)</li>
+<li>Eligible intervention(s) or exposure(s)</li>
+<li>Eligible comparator(s) (if appropriate)</li>
+<li>Eligible outcomes</li>
+<li>Eligible study designs</li>
+</ul>
+<p>If a worksheet or checklist is to be used for the eligibility screening process this should be provided in an appendix.</p>
+<p>State here the article screening process in terms of</p>
+<ul>
+<li>Title, abstract and full text screening methodology and how you will record and report the process from number of articles considered to number of studies included. Please note here the distinction between articles and studies (articles can report on more than one study and studies can be reported in more than one article).</li>
+<li>Test(s) for consistency of decisions regarding eligibility, at title, abstract, full-text level.</li>
+</ul>
+<p>(NOTE THAT I COULD FOLLOW THE PRISMA APPROACH HERE)</p>
+<p>Describe how the Review Team members who have also authored articles to be considered within the review will be prevented from influencing decisions regarding inclusion or critical appraisal of their own work.</p>
+<p>Please state clearly what you will provide in your report to conform with CEE Standards (e.g. a list of studies excluded at the full text screening step with reasons for exclusion).</p>
+</div>
+<div id="study-critical-appraisal" class="section level3">
+<h3>Study Critical Appraisal</h3>
+<p>Describe here the approach you propose to use to critically appraise and assess internal and external validity of included studies. Consideration should be given to ensuring that important aspects of validity which would influence the reliability of the evidence are taken into account, such as internal validity (freedom from bias or confounding) and external validity (generalisability of a study’s results to the current Systematic Review question). If a worksheet or checklist is used for the assessing study validity this should be provided in a table or an appendix. Describe how the information from critical appraisal will be used in any synthesis. Describe how repeatability of individual reviewer critical appraisal of study validity will be tested.</p>
+</div>
+<div id="data-extraction-strategy" class="section level3">
+<h3>Data Extraction Strategy</h3>
+<p>Describe here how you will collect and record outcome data and associated meta-data from included studies. How will the repeatability of coding, meta-data and data extraction be tested? Please state that your extracted data records will be made available as additional files. Describe any processes for obtaining and confirming missing or unclear information or data from authors.</p>
+</div>
+<div id="potential-effect-modifiers-and-reasons-for-heterogeneity" class="section level3">
+<h3>Potential effect modifiers and reasons for heterogeneity</h3>
+<p>Provide a list of those effect modifiers to be considered and coded in the review and details of how the list was compiled (including consultation of external experts). The list should not be exhaustive but should state those variables thought to be most important and amenable to analysis.</p>
+</div>
+<div id="data-synthesis-and-presentation" class="section level3">
+<h3>Data Synthesis and presentation</h3>
+<p>Describe here the methods you propose to synthesise the collected data and any subsequent manipulation of the data set, such as sub-group or sensitivity analyses. Narrative synthesis should always be attempted and included studies described and tabulated as a minimum. The potential for meta-analysis (or any alternative form of synthesis such as qualitative or mixed methods) should have been assessed and the preferred synthesis methodology should be stated in sufficient detail for reviewers to comment. Appropriate subgroup analyses, sensitivity analyses and tests for publication bias should be planned where possible.</p>
+</div>
+</div>
+<div id="declarations" class="section level2">
+<h2>Declarations</h2>
+<div id="potential-conflicts-of-interest-and-sources-of-support" class="section level3">
+<h3>Potential Conflicts of Interest and Sources of Support</h3>
+<p>The independence of CEE Systematic Reviews is a high priority. Consequently, the potential competing interests of the Review Team should be transparent. A competing interest exists when your interpretation of data or presentation of information may be influenced by your personal or financial relationship with other people or organizations. Authors must disclose any financial competing interests; they should also reveal any non-financial competing interests that may cause them embarrassment were they to become public after the publication of the manuscript. Authors are required to complete a declaration of competing interests. All competing interests that are declared will be listed at the end of published articles. Where an author gives no competing interests, the listing will read</p>
+<p>‘The author(s) declare that they have no competing interests’. When completing your declaration, please consider the following questions:</p>
+</div>
+<div id="financial-competing-interests" class="section level3">
+<h3>Financial competing interests</h3>
+<p>In the past five years have you received reimbursements, fees, funding, or salary from an organization that may in any way gain or lose financially from the publication of this manuscript, either now or in the future? Is such an organization financing this manuscript (including the article-processing charge)? If so, please specify. Do you hold any stocks or shares in an organization that may in any way gain or lose financially from the publication of this manuscript, either now or in the future? If so, please specify. Do you hold or are you currently applying for any patents relating to the content of the manuscript? Have you received reimbursements, fees, funding, or salary from an organization that holds or has applied for patents relating to the content of the manuscript? If so, please specify.</p>
+<p>Do you have any other financial competing interests? If so, please specify.</p>
+</div>
+<div id="non-financial-competing-interests" class="section level3">
+<h3>Non-financial competing interests</h3>
+<p>Are there any non-financial competing interests (political, personal, religious, ideological, academic, intellectual, commercial or any other) to declare in relation to this manuscript? If so, please specify</p>
+</div>
+<div id="funding" class="section level3">
+<h3>Funding</h3>
+<p>All sources of funding for the research reported should be declared. The role of the funding body in the design of the study and collection, analysis, and interpretation of data and in writing the manuscript should be declared.</p>
+</div>
+<div id="authors-contributions" class="section level3">
+<h3>Authors’ contributions</h3>
+<p>The individual contributions of authors to the manuscript should be specified in this section. Guidance and criteria for authorship can be found in our editorial policies.</p>
+<p>Please use initials to refer to each author’s contribution in this section, for example: “FC analyzed and interpreted the data regarding the hematological disease and the transplant. RH performed the histological examination of the kidney, and was a major contributor in writing the manuscript. All authors read and approved the final manuscript.”</p>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>Please acknowledge anyone who contributed towards the article who does not meet the criteria for authorship, including anyone who provided professional writing services or materials.</p>
+<p>Authors should obtain permission to acknowledge from all those mentioned in the Acknowledgements section. See our journal editorial policies for a full explanation of acknowledgements and authorship criteria. If you do not have anyone to acknowledge, please write “Not applicable” in this section.</p>
+</div>
+<div id="authors-information" class="section level3">
+<h3>Authors’ information</h3>
+<p>This section is optional. You may choose to use this section to include any relevant information about the author(s) that may aid the reader’s interpretation of the article, and understand the standpoint of the author(s). This may include details about the authors’ qualifications, current positions they hold at institutions or societies, or any other relevant background information. Please refer to authors using their initials. Note this section should not be used to describe any competing interests.</p>
+</div>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p>All references cited in the above sections should be listed here and formatted according to journal instructions.</p>
+</div>
+<div id="figures-tables-and-additional-files" class="section level2">
+<h2>Figures, Tables and Additional Files</h2>
+<p>See the Journal’s general formatting guidelines for information on how to format figures, tables and additional files.</p>
+</div>
+</div>
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+<hr>
+<p>
+  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
+  analysis was created with
+  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.0.1
+</p>
+<hr>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

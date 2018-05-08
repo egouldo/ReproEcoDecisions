@@ -1,0 +1,126 @@
+---
+title: "review_protocol"
+author: "Elise Gould"
+date: "16/03/2018"
+output: html_document
+---
+
+# Title Page and Abstract
+
+## Abstract
+
+**Background** – the context and purpose of the review, including the review question; 
+
+**Methods** – how the review will be conducted and the outputs that are expected. All stages of the methods should be briefly described here, including searching, eligibility screening, data extraction, synthesis and presentation.
+
+**Keywords**
+
+# Main Text
+
+## Background
+
+This section should be written in a way that is accessible to readers without specialist knowledge in that area and must clearly state – and, if helpful, illustrate – the background to the review and its aims. You should indicate why this study is necessary and what it aims to contribute to the field. If possible, a theory of change and/or conceptual model should be presented that links the key elements of the question (e.g. explaining how an intervention or exposure is linked to the outcome). The role of commissioners and other stakeholders in the formulation of the question should be described and explained. Any proposed role of stakeholders throughout the review process should also be described. It should logically lead the reader to the primary question stated in the next section.
+
+## Objective of the Systematic Review
+
+You should describe the primary question and any secondary questions when applicable. The primary question is the main question of the Systematic Review and should be the same or very similar to the Protocol title. The rationale for any secondary questions (usually linked to possible subgroup and/or heterogeneity analyses) should be explained.
+
+## Methods
+
+### Searches
+
+Here the proposed searches are described in sufficient detail so as to be repeatable. Details of how the search strategy was developed through scoping should be provided (possibly in an additional file). The following list is a guide to the detail required on what will be searched and how the search will be conducted.
+
+- search terms and languages
+- search strings / combinations of searches (search strings refer to combinations of terms using Boolean characters, combinations are methods used to set-up and pool different searches run separately)
+- Estimating the comprehensiveness of the search
+- Bibliographic databases and services to be searched (e.g. ISI Web of Science, Scopus, CAB Abstracts)
+- Internet searches to be conducted (e.g. Google Scholar)
+- Specialist searches – Searches for grey literature: contacts, searches of organisational websites, use of specific search terms or strings, filtering or limitations.
+- Supplementary searches such as Bibliographical searches and literature provided directly by stakeholders
+- Any software that will be used to conduct and record your search should be described.
+
+### Eligibility criteria and screening process
+
+State here the criteria you will use to decide whether articles and the studies they report are eligible for inclusion in the review. Normally you should use the following subheadings;
+
+- Eligible population(s)
+- Eligible intervention(s) or exposure(s)
+- Eligible comparator(s) (if appropriate)
+- Eligible outcomes
+- Eligible study designs
+
+If a worksheet or checklist is to be used for the eligibility screening process this should be provided in an appendix.
+
+State here the article screening process in terms of
+
+- Title, abstract and full text screening methodology and how you will record and report the process from number of articles considered to number of studies included. Please note here the distinction between articles and studies (articles can report on more than one study and studies can be reported in more than one article).
+- Test(s) for consistency of decisions regarding eligibility, at title, abstract, full-text level.
+
+(NOTE THAT I COULD FOLLOW THE PRISMA APPROACH HERE)
+
+Describe how the Review Team members who have also authored articles to be considered within the review will be prevented from influencing decisions regarding inclusion or critical appraisal of their own work.
+
+Please state clearly what you will provide in your report to conform with CEE Standards (e.g. a list of studies excluded at the full text screening step with reasons for exclusion).
+
+### Study Critical Appraisal
+
+Describe here the approach you propose to use to critically appraise and assess internal and external validity of included studies. Consideration should be given to ensuring that important aspects of validity which would influence the reliability of the evidence are taken into account, such as internal validity (freedom from bias or confounding) and external validity (generalisability of a study’s results to the current Systematic Review question). If a worksheet or checklist is used for the assessing study validity this should be provided in a table or an appendix. Describe how the information from critical appraisal will be used in any synthesis. Describe how repeatability of individual reviewer critical appraisal of study validity will be tested.
+
+### Data Extraction Strategy
+
+Describe here how you will collect and record outcome data and associated meta-data from included studies. How will the repeatability of coding, meta-data and data extraction be tested? Please state that your extracted data records will be made available as additional files. Describe any processes for obtaining and confirming missing or unclear information or data from authors.
+
+### Potential effect modifiers and reasons for heterogeneity
+
+Provide a list of those effect modifiers to be considered and coded in the review and details of how the list was compiled (including consultation of external experts). The list should not be exhaustive but should state those variables thought to be most important and amenable to analysis.
+
+### Data Synthesis and presentation
+
+Describe here the methods you propose to synthesise the collected data and any subsequent manipulation of the data set, such as sub-group or sensitivity analyses. Narrative synthesis should always be attempted and included studies described and tabulated as a minimum. The potential for meta-analysis (or any alternative form of synthesis such as qualitative or mixed methods) should have been assessed and the preferred synthesis methodology should be stated in sufficient detail for reviewers to comment. Appropriate subgroup analyses, sensitivity analyses and tests for publication bias should be planned where possible.
+
+## Declarations
+
+### Potential Conflicts of Interest and Sources of Support
+
+The independence of CEE Systematic Reviews is a high priority. Consequently, the potential competing interests of the Review Team should be transparent. A competing interest exists when your interpretation of data or presentation of information may be influenced by your personal or financial relationship with other people or organizations. Authors must disclose any financial competing interests; they should also reveal any non-financial competing interests that may cause them embarrassment were they to become public after the publication of the manuscript. Authors are required to complete a declaration of competing interests. All competing interests that are declared will be listed at the end of published articles. Where an author gives no competing interests, the listing will read
+
+‘The author(s) declare that they have no competing interests’. When completing your declaration, please consider the following questions:
+
+### Financial competing interests
+
+In the past five years have you received reimbursements, fees, funding, or salary from an organization that may in any way gain or lose financially from the publication of this manuscript, either now or in the future? Is such an organization financing this manuscript (including the article-processing charge)? If so, please specify. Do you hold any stocks or shares in an organization that may in any way gain or lose financially from the publication of this manuscript, either now or in the future? If so, please specify. Do you hold or are you currently applying for any patents relating to the content of the manuscript? Have you received reimbursements, fees, funding, or salary from an organization that holds or has applied for patents relating to the content of the manuscript? If so, please specify.
+
+Do you have any other financial competing interests? If so, please specify.
+
+### Non-financial competing interests
+
+Are there any non-financial competing interests (political, personal, religious, ideological, academic, intellectual, commercial or any other) to declare in relation to this manuscript? If so, please specify
+
+### Funding
+
+All sources of funding for the research reported should be declared. The role of the funding body in the design of the study and collection, analysis, and interpretation of data and in writing the manuscript should be declared.
+
+### Authors’ contributions
+
+The individual contributions of authors to the manuscript should be specified in this section. Guidance and criteria for authorship can be found in our editorial policies.
+
+Please use initials to refer to each author’s contribution in this section, for example: “FC analyzed and interpreted the data regarding the hematological disease and the transplant. RH performed the histological examination of the kidney, and was a major contributor in writing the manuscript. All authors read and approved the final manuscript.”
+
+### Acknowledgements
+
+Please acknowledge anyone who contributed towards the article who does not meet the criteria for authorship, including anyone who provided professional writing services or materials.
+
+Authors should obtain permission to acknowledge from all those mentioned in the Acknowledgements section. See our journal editorial policies for a full explanation of acknowledgements and authorship criteria. If you do not have anyone to acknowledge, please write “Not applicable” in this section.
+
+### Authors’ information
+
+This section is optional. You may choose to use this section to include any relevant information about the author(s) that may aid the reader’s interpretation of the article, and understand the standpoint of the author(s). This may include details about the authors’ qualifications, current positions they hold at institutions or societies, or any other relevant background information. Please refer to authors using their initials. Note this section should not be used to describe any competing interests.
+
+## References
+
+ All references cited in the above sections should be listed here and formatted according to journal instructions.
+
+## Figures, Tables and Additional Files
+
+See the Journal’s general formatting guidelines for information on how to format figures, tables and additional files.

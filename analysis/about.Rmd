@@ -1,0 +1,8 @@
+---
+title: "About"
+output:
+  workflowr::wflow_html:
+    toc: false
+---
+
+This website documents the quantitative literature review process for my PhD, from planning, to scoping, to analysis, inferencing and write-up.

@@ -1,11 +1,21 @@
 ---
-title: "review_protocol"
+title: "Review Protocol"
 author: "Elise Gould"
 date: "16/03/2018"
 output: html_document
 ---
 
+[CEE Protocol template](https://environmentalevidencejournal.biomedcentral.com/submission-guidelines/preparing-your-manuscript/systematic-review-protocol)
+
+See Table 3, PRISMA-P 2015 checklist for recommended items to include in the systematic review protocol [@Moher2015].
+
 # Title Page and Abstract
+
+*Item 1a. 1b is NA*
+
+*Item 3a, Contact: Provide name, institutional affiliation, and e-mail address of all protocol authors; provide physical mailing address of corresponding author*
+
+*Item 4, Amendments: Provide name, institutional affiliation, and e-mail address of all protocol authors; provide physical mailing address of corresponding author*
 
 ## Abstract
 
@@ -19,15 +29,24 @@ output: html_document
 
 ## Background
 
+*Item 6, Introduction, Rationale: Describe the rationale for the review in the context of what is already known*
+
 This section should be written in a way that is accessible to readers without specialist knowledge in that area and must clearly state – and, if helpful, illustrate – the background to the review and its aims. You should indicate why this study is necessary and what it aims to contribute to the field. If possible, a theory of change and/or conceptual model should be presented that links the key elements of the question (e.g. explaining how an intervention or exposure is linked to the outcome). The role of commissioners and other stakeholders in the formulation of the question should be described and explained. Any proposed role of stakeholders throughout the review process should also be described. It should logically lead the reader to the primary question stated in the next section.
 
 ## Objective of the Systematic Review
+
+*Item 7, Introduction, objectives: Provide an explicit statement of the question(s) the review will address with reference to participants, interventions, comparators, and outcomes (PICO)*
 
 You should describe the primary question and any secondary questions when applicable. The primary question is the main question of the Systematic Review and should be the same or very similar to the Protocol title. The rationale for any secondary questions (usually linked to possible subgroup and/or heterogeneity analyses) should be explained.
 
 ## Methods
 
+
 ### Searches
+
+*Item 9, Methods, Information sources: Describe all intended information sources (e.g., electronic databases, contact with study authors, trial registers, or other grey literature sources) with planned dates of coverage*
+
+*Item 10, Methods, Search Strategy: Present draft of search strategy to be used for at least one electronic database, including planned limits, such that it could be repeated*
 
 Here the proposed searches are described in sufficient detail so as to be repeatable. Details of how the search strategy was developed through scoping should be provided (possibly in an additional file). The following list is a guide to the detail required on what will be searched and how the search will be conducted.
 
@@ -42,6 +61,19 @@ Here the proposed searches are described in sufficient detail so as to be repeat
 
 ### Eligibility criteria and screening process
 
+Here provide explanation about the rationale you propose to include/exclude articles based on the following aspects, so that this stage is transparent and replicable by any external reader.
+
+**Screening**
+
+State here the article screening process in terms of
+
+- Title, abstract and full text screening methodology and how you will record and report the process from number of articles considered to number of studies included. Please note here the distinction between articles and studies (articles can report on more than one study and studies can be reported in more than one article).
+- Test(s) for consistency of decisions regarding eligibility, at title, abstract, full-text level.
+
+**Inclusion**
+
+*Item 8, Methods, Eligibility Criteria: Specify the study characteristics (e.g., PICO, study design, setting, time frame) and report characteristics (e.g., years considered, language, publication status) to be used as criteria for eligibility for the review*
+
 State here the criteria you will use to decide whether articles and the studies they report are eligible for inclusion in the review. Normally you should use the following subheadings;
 
 - Eligible population(s)
@@ -52,24 +84,31 @@ State here the criteria you will use to decide whether articles and the studies 
 
 If a worksheet or checklist is to be used for the eligibility screening process this should be provided in an appendix.
 
-State here the article screening process in terms of
-
-- Title, abstract and full text screening methodology and how you will record and report the process from number of articles considered to number of studies included. Please note here the distinction between articles and studies (articles can report on more than one study and studies can be reported in more than one article).
-- Test(s) for consistency of decisions regarding eligibility, at title, abstract, full-text level.
-
-(NOTE THAT I COULD FOLLOW THE PRISMA APPROACH HERE)
+Please state clearly what you will provide in your report to conform with CEE Standards (e.g. a list of studies excluded at the full text screening step with reasons for exclusion).
 
 Describe how the Review Team members who have also authored articles to be considered within the review will be prevented from influencing decisions regarding inclusion or critical appraisal of their own work.
-
-Please state clearly what you will provide in your report to conform with CEE Standards (e.g. a list of studies excluded at the full text screening step with reasons for exclusion).
 
 ### Study Critical Appraisal
 
 Describe here the approach you propose to use to critically appraise and assess internal and external validity of included studies. Consideration should be given to ensuring that important aspects of validity which would influence the reliability of the evidence are taken into account, such as internal validity (freedom from bias or confounding) and external validity (generalisability of a study’s results to the current Systematic Review question). If a worksheet or checklist is used for the assessing study validity this should be provided in a table or an appendix. Describe how the information from critical appraisal will be used in any synthesis. Describe how repeatability of individual reviewer critical appraisal of study validity will be tested.
 
+*Item 14, Risk of bias in individual studies: Describe anticipated methods for assessing risk of bias of individual studies, including whether this will be done at the outcome or study level, or both; state how this information will be used in data synthesis*
+
 ### Data Extraction Strategy
 
 Describe here how you will collect and record outcome data and associated meta-data from included studies. How will the repeatability of coding, meta-data and data extraction be tested? Please state that your extracted data records will be made available as additional files. Describe any processes for obtaining and confirming missing or unclear information or data from authors.
+
+*Item 11a, Study records, Data management: Describe the mechanism(s) that will be used to manage records and data throughout the review*
+
+[@Lajeunesse:2015gf] Software / R package METAGEAR for running the analyses in R
+
+*Item 11b, Study records, selection process: State the process that will be used for selecting studies (e.g., two independent reviewers) through each phase of the review (i.e., screening, eligibility, and inclusion in meta-analysis)*
+
+*Item 11c, Study records, data collection process: Describe planned method of extracting data from reports (e.g., piloting forms, done independently, in duplicate), any processes for obtaining and confirming data from investigators*.
+
+*Item 12, Data items: List and define all varibales for which data will be sought (e.g. PICO items, funding sources), any pre-planned data assumptions and simplifications*
+
+*Item 13, Outcomes and prioritisation: List and define all outcomes for which data will be sought, including prioritization of main and additional outcomes, with rationale*
 
 ### Potential effect modifiers and reasons for heterogeneity
 
@@ -79,7 +118,34 @@ Provide a list of those effect modifiers to be considered and coded in the revie
 
 Describe here the methods you propose to synthesise the collected data and any subsequent manipulation of the data set, such as sub-group or sensitivity analyses. Narrative synthesis should always be attempted and included studies described and tabulated as a minimum. The potential for meta-analysis (or any alternative form of synthesis such as qualitative or mixed methods) should have been assessed and the preferred synthesis methodology should be stated in sufficient detail for reviewers to comment. Appropriate subgroup analyses, sensitivity analyses and tests for publication bias should be planned where possible.
 
+*Item 15a, Synthesis: Describe criteria under which study data will be quantitatively synthesized*
+
+*Item 15b, Synthesis: If data are appropriate for quantitative synthesis, describe planned summary measures, methods of handling data, and methods of combining data from studies, including any planned exploration of consistency (e.g., I2, Kendall’s tau)*
+
+*Item 15c: Describe any proposed additional analyses (e.g., sensitivity or subgroup analyses, meta-regression)*
+
+*Item 15d: If quantitative synthesis is not appropriate, describe the type of summary planned*
+
+*Item 16, Meta-bias(es): Specify any planned assessment of meta-bias(es) (e.g., publication bias across studies, selective reporting within studies).*
+
+*Item 17, Confidence in cumulative evidence: Describe how the strength of the body of evidence will be assessed (e.g., GRADE)*
+
 ## Declarations
+
+### Availability of data and materials
+
+Following the guidelines here: [https://group.springernature.com/gp/authors/research-data-policy/data-availability-statements/12330880](https://group.springernature.com/gp/authors/research-data-policy/data-availability-statements/12330880). Below is an example:
+
+*statement type / description*
+
+Data available in a public (institutional, general or subject specific) repository that issues datasets with DOIs (non-mandated deposition)	
+
+*Template / example text*
+The [data type] data that support the findings of this study are available in [repository name e.g “figshare”] with the identifier(s) [data DOI(s) e.g. “http://doi.org/10.6084/m9.figshare.1499292_D8”][Reference number]
+
+*My statement*
+The data that support the findings of this study are available in [https://github.com/egouldo/ReproEcoDecisions](https://github.com/egouldo/ReproEcoDecisions) with the identifiers *INSERT DOI HERE*. (Note, I aim to wrap a figshare DOI around the GitHub repo).
+
 
 ### Potential Conflicts of Interest and Sources of Support
 
@@ -99,9 +165,17 @@ Are there any non-financial competing interests (political, personal, religious,
 
 ### Funding
 
+*Item 5a, Support, Sources: Indicate sources of financial or other support for the review*
+
+*Item 5b, Support, Sponsor: Provide name for the review funder and/or sponsor*
+
+*Item 5c, Support, Role of sponsor / funder: Describe roles of funder(s), sponsor(s), and/or institution(s), if any, in developing the protocol*
+
 All sources of funding for the research reported should be declared. The role of the funding body in the design of the study and collection, analysis, and interpretation of data and in writing the manuscript should be declared.
 
 ### Authors’ contributions
+
+*PRISMA-P, item 3a: Describe contributions of protocol authors and identify the guarantor of the review*
 
 The individual contributions of authors to the manuscript should be specified in this section. Guidance and criteria for authorship can be found in our editorial policies.
 
@@ -117,6 +191,30 @@ Authors should obtain permission to acknowledge from all those mentioned in the 
 
 This section is optional. You may choose to use this section to include any relevant information about the author(s) that may aid the reader’s interpretation of the article, and understand the standpoint of the author(s). This may include details about the authors’ qualifications, current positions they hold at institutions or societies, or any other relevant background information. Please refer to authors using their initials. Note this section should not be used to describe any competing interests.
 
+### Ethics approval and consent to participate
+
+Manuscripts reporting studies involving human participants, human data or human tissue must:
+
+include a statement on ethics approval and consent (even where the need for approval was waived)
+include the name of the ethics committee that approved the study and the committee’s reference number if appropriate
+Studies involving animals must include a statement on ethics approval.
+
+See our editorial policies for more information.
+
+If your manuscript does not report on or involve the use of any animal or human data or tissue, please state “Not applicable” in this section.
+
+NOTE: this may be relevent.. probably under the 'human data' point...
+
+### Consent for publication
+
+If your manuscript contains any individual person’s data in any form (including individual details, images or videos), consent for publication must be obtained from that person, or in the case of children, their parent or legal guardian. All presentations of case reports must have consent for publication.
+
+You can use your institutional consent form or our consent form if you prefer. You should not send the form to us on submission, but we may request to see a copy at any stage (including after publication).
+
+See our editorial policies for more information on consent for publication.
+
+If your manuscript does not contain any data from any individual person, please state “Not applicable” in this section.
+
 ## References
 
  All references cited in the above sections should be listed here and formatted according to journal instructions.
@@ -124,3 +222,4 @@ This section is optional. You may choose to use this section to include any rele
 ## Figures, Tables and Additional Files
 
 See the Journal’s general formatting guidelines for information on how to format figures, tables and additional files.
+

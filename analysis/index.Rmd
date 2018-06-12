@@ -10,7 +10,9 @@ Welcome to the portal for my systematic literature review on reproducibility in 
 
 **Pre-registration**
 
-I will be following the CEE guidelines for Systematic Review and Evidence Synthesis in Environmental Management. As such, the protocol will be submitted for review and registration with the Journal of Environmental Evidence. I will also use the [OSF pre-registration process](http://help.osf.io/m/registrations/l/524206-understand-registration-forms), "registered report protocol preregistration". The other option is to select the "Prereg" challenge (but the article must be published by December 31, 2018 to receive the $1000).
+I will be following the CEE guidelines for Systematic Review and Evidence Synthesis in Environmental Management. This involves the development of a review protocol. I will also be following the PRISMA-P [@Moher2015] checklist for reporting items. I opted to use the PRISMA-P checklist in addition to the CEE guidelines, because of its detail / specificity in terms of data management of study records and also guideance for what to look out for in synthesis.
+
+Following the CEE process for conducting SR's, the protocol will be submitted for review and registration with the Journal of Environmental Evidence. I will also use the [OSF pre-registration process](http://help.osf.io/m/registrations/l/524206-understand-registration-forms), "registered report protocol preregistration". The other option is to select the "Prereg" challenge (but the article must be published by December 31, 2018 to receive the $1000).
 
 
 **From protocol design, scoping, analysis and review:**

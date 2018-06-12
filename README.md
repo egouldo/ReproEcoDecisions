@@ -12,3 +12,15 @@ This repository is set up with multiple-layered workflows:
 
 `/R` and `/data` and `/man` folders, containing all the necessary documented R functions I write to implement this literature review.
 
+Some important workflowr commands: 
+
+```
+wflow_git_remote(remote = "origin", 
+                 user = "egouldo", 
+                 repo = "ReproEcoDecisions",
+                 protocol = "ssh", 
+                 action = "set_url")
+
+
+wflow_build()
+```

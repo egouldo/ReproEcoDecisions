@@ -7,13 +7,15 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Scoping Exercise"
+      href: scoping_exercise.html
     - text: "About"
       href: about.html
     - text: "License"
       href: license.html
   right:
     - icon: fa-github
-      href: https://github.com/jdblischak/workflowr
+      href: https://github.com/egouldo/ReproEcoDecisions
 output:
   workflowr::wflow_html:
     toc: true

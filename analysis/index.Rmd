@@ -6,7 +6,12 @@ output:
     toc: false
 ---
 
-Welcome to the portal for my systematic literature review on reproducibility in ecology and conservation.
+Welcome to the portal for my systematic literature review on reproducibility in ecology and conservation. All project-related materials are stored and openly [accessible on the OSF]([accessible on the OSF]).
+
+**Pre-registration**
+
+I will be following the CEE guidelines for Systematic Review and Evidence Synthesis in Environmental Management. As such, the protocol will be submitted for review and registration with the Journal of Environmental Evidence. I will also use the [OSF pre-registration process](http://help.osf.io/m/registrations/l/524206-understand-registration-forms), "registered report protocol preregistration". The other option is to select the "Prereg" challenge (but the article must be published by December 31, 2018 to receive the $1000).
+
 
 **From protocol design, scoping, analysis and review:**
 

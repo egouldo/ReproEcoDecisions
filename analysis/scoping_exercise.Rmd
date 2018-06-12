@@ -1,0 +1,18 @@
+---
+title: "Scoping Exercise"
+author: "Elise Gould"
+date: "12/06/2018"
+output: html_document
+---
+
+This is the landing page for the Scoping Exercise
+
+## Scoping Exercise Raw Data
+
+To be exposed in a [dataspice](https://github.com/ropenscilabs/dataspice) HTML cardview embed.
+
+## Link to Scoping Exercise Report
+
+[Scoping Exercise- refining the search strategy](review_scoping.html)
+
+Alternatively, the entire report can just be included here as its own tab.
